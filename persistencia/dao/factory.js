@@ -1,4 +1,5 @@
-require("dotenv").config();
+//require("dotenv").config();
+const {config} = require('../../config.js'); // => configuracion por argumentos
 /* --------- imports carrito -------- */
 const CarritoDaoMemoria = require('./carritos/CarritosDaoMemoria.js');
 const CarritoDaoArchivo = require('./carritos/CarritosDaoArchivo.js');
@@ -52,7 +53,7 @@ const OrdenesDaoMariadb = require('./ordenes/OrdenesDaoMariadb.js');
 //console.log(process.env.DAO = 'MONGODB');
 
 
-if(process.env.DAO === 'MEMORIA'){
+if(config.DAO === 'MEMORIA'){
     exports.ChatFactory     = ChatsDaoMemoria;
     exports.usuariosFactory = UsuariosDaoMemoria;
     exports.favoritoFactory = FavoritoDaoMemoria;
@@ -61,7 +62,7 @@ if(process.env.DAO === 'MEMORIA'){
     exports.suscribeFactory = SuscribeDaoMemoria;
     exports.Carrito         = CarritoDaoMemoria;
     exports.Producto        = ProductosDaoMemoria;
-}else if(process.env.DAO === 'ARCHIVO'){
+}else if(config.DAO === 'ARCHIVO'){
     exports.ChatFactory     = ChatsDaoArchivo;
     exports.usuariosFactory = UsuariosDaoArchivo;
     exports.favoritoFactory = FavoritoDaoArchivo;
@@ -70,7 +71,7 @@ if(process.env.DAO === 'MEMORIA'){
     exports.suscribeFactory = SuscribeDaoArchivo;
     exports.Carrito         = CarritoDaoArchivo;
     exports.Producto        = ProductosDaoArchivo;
-}else if(process.env.DAO === 'SQLITE3'){
+}else if(config.DAO === 'SQLITE3'){
     exports.ChatFactory     = ChatsDaoSqlite3;
     exports.usuariosFactory = UsuariosDaoSqlite3;
     exports.favoritoFactory = FavoritoDaoSqlite3;
@@ -79,7 +80,7 @@ if(process.env.DAO === 'MEMORIA'){
     exports.suscribeFactory = SuscribeDaoSqlite3;
     exports.Carrito         = CarritoDaoSqlite3;
     exports.Producto        = ProductosDaoSqlite3;
-}else if(process.env.DAO === 'MARIADB'){
+}else if(config.DAO === 'MARIADB'){
     exports.ChatFactory     = ChatsDaoMariadb;
     exports.usuariosFactory = UsuariosDaoMariadb;
     exports.favoritoFactory = FavoritoDaoMariadb;
@@ -88,7 +89,7 @@ if(process.env.DAO === 'MEMORIA'){
     exports.suscribeFactory = SuscribeDaoMariadb;
     exports.Carrito         = CarritoDaoMariadb;
     exports.Producto        = ProductosDaoMariadb;
-}else if(process.env.DAO === 'MONGODB'){
+}else if(config.DAO === 'MONGODB'){
     exports.ChatFactory     = ChatsDaoMongodb;
     exports.usuariosFactory = UsuariosDaoMongodb;
     exports.favoritoFactory = FavoritoDaoMongodb;
