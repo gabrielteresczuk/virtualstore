@@ -8,7 +8,7 @@ dotenv.config({
 console.log('MODO: ' + process.env.NODE_ENV);
 
 const config = {
-  NODE_ENV : process.env.NODE_ENV || 'desarrollo',
+  NODE_ENV : process.env.NODE_ENV || 'produccion',
   PORT : process.env.PORT || 8080,
   DAO: process.env.DAO || 'MONGODB',      //-> MEMORIA, ARCHIVO, SQLITE3, MARIADB, MONGODB
   MODO:process.env.MODO || 'FORK',
