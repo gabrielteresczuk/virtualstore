@@ -232,13 +232,13 @@ Server -> Servidor Node + Build Front End
 
   
 
-**HEROKU**
+**RAILWAY**
 
   
 
   
 
-- URL del Sitio en Vivo: [Demo en HEROKU](https://gabriel-ecommerce.herokuapp.com/) 👀
+- URL del Sitio en Vivo: [Demo en HEROKU](https://virtualstore-production.up.railway.app/) 👀
 
   
 
@@ -372,6 +372,9 @@ El servidor podrá tomar configuraciones desde un archivo externo.
 
 Dispondrá de una vista creada con pug, que permita ver la configuración del servidor.
 
+- Ruta del archivo config PUG RAILWAY: [config pug](https://virtualstore-production.up.railway.app/config) 👀
+- Ruta del archivo config PUG LOCAL: [config pug](https://localhost:8080/config) 👀
+
 ![pug](./utils/readme/09.png)
 
   
@@ -462,6 +465,9 @@ Finalizada la orden, enviar un mail a la dirección de mi cuenta con los detalle
  ![email](./utils/readme/r08.png)
 
 Se dispondrá de un archivo de configuración externo con opciones para desarrollo y otras para producción, que serán visualizadas a través de una vista construida con handlebars. Como parámetros de configuración estará el puerto de escucha del servidor, la url de la base de datos, el mail que recibirá notificaciones del backend, tiempo de expiración de sesión y los que sea necesario incluir.
+
+- Ruta del archivo config HBS RAILWAY: [config pug](https://virtualstore-production.up.railway.app/hbs) 👀
+- Ruta del archivo config HBS LOCAL: [config pug](https://localhost:8080/hbs) 👀
 
   ![email](./utils/readme/r09.png)
 
