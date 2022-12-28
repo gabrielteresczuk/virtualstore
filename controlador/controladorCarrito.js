@@ -45,7 +45,7 @@ module.exports = {
       
         try {
           let productos = await negocioCarritos.listarProductosPorId(id_carrito);
-          //await nuevoPedido(productos, user);           //-> enviar mail, FREE
+          await nuevoPedido(productos, user);           //-> enviar mail, FREE
           //await enviarSMS(user);                        //-> enviar SMS, $$$$ COSTO
           //await enviarWSP();                            //-> enviar ESP, $$$$ COSTO
           let data = await negocioCarritos.terminarCarrito(id_carrito);

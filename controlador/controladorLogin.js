@@ -27,7 +27,7 @@ module.exports = {
     async postSignUp(req,res,next){
         logger.log('info', `ROUTE: ${req.path} - METHOD: ${req.method}`);
 
-        //nuevoRegistro(req.body)     // ->  envio EMAIL
+        await nuevoRegistro(req.body)     // ->  envio EMAIL
       
         const file= req.file;
         if(!file){
