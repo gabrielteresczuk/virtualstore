@@ -19,7 +19,6 @@ const config = {
   SESSION_MIN: process.env.SESSION_MIN || 10,
   SESSION_SECRET:process.env.SESSION_SECRET || 'shh',
   JWT_SECRET:process.env.JWT_SECRET || 'myprivatekey',
-  HOST:process.env.HOST || 'http://localhost:8080'
 }
 
 
