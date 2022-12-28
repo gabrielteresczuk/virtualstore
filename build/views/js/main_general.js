@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
     token = localStorage.getItem("vs_token");
@@ -10,7 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         credentials: 'include'
       };
-      fetch(`http://localhost:8080/signin`, requestOptions)
+      //fetch(`http://localhost:8080/signin`, requestOptions)
+      fetch(`https://virtualstore-production.up.railway.app/signin`, requestOptions)
       .then((response) => {
         // si es 401 es por que no esta autorizado
         if (response.status !== 200) {

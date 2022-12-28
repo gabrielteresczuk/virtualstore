@@ -18,7 +18,8 @@ const config = {
   TWILIO_TOKEN:process.env.TWILIO_TOKEN ||'7ee9a2c85f2f3ab9f108b12850e00c38',
   SESSION_MIN: process.env.SESSION_MIN || 10,
   SESSION_SECRET:process.env.SESSION_SECRET || 'shh',
-  JWT_SECRET:process.env.JWT_SECRET || 'myprivatekey'
+  JWT_SECRET:process.env.JWT_SECRET || 'myprivatekey',
+  HOST:process.env.HOST || 'http://localhost:8080'
 }
 
 
